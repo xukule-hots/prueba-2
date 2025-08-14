@@ -21,6 +21,7 @@ body{
     background-color: black;
     height: 300px;
     width: 500px;
+    transition: 0.3s ease;
 }
 
 .box1-2{
@@ -54,11 +55,6 @@ body{
     font-size: 14px;
 }
 
-.box1-link{
-    color: white;
-    text-decoration: none;
-}
-
 .box1:hover .box1-2{
     opacity: 0.3;
 }
@@ -72,4 +68,24 @@ body{
     transform: translate(1px, 1px);
     box-shadow: 0 0 0;
 }
+
+@media only screen and (max-width: 500px) {
+    .box1{
+        transform: scale(0.5);
+    }
+
+    .box1-text{
+        position: absolute;
+        top: 170px;
+        left: -50px;
+        opacity: 1;
+        transform: scale(2);
+        border-radius: 10px;
+    }
+
+    .box1:hover .box1-2{
+        opacity: 1;
+    }
+}
+
 
